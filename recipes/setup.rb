@@ -15,7 +15,9 @@ package 'ntp' do
 end
 
 file '/etc/motd' do
-  content 'This server is the property of Brian'
+  content 'This server is the property of Brian
+  HOSTNAME: localhost.localdomain
+'
   owner 'root'
   group 'root'
 end
