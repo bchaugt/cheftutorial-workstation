@@ -14,10 +14,11 @@ package 'ntp' do
   action :install
 end
 
-file '/etc/motd' do
-  content 'This server is the property of Brian
-  HOSTNAME: localhost.localdomain
-'
-  owner 'root'
-  group 'root'
+# Print statement 'I have 4 apples'
+apple_count = 4
+puts "I have #{apple_count} apples"
+
+template '/etc/motd' do
+  source 'motd.erb'
+  action :create
 end
